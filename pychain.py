@@ -8,7 +8,7 @@ import pandas as pd
 import hashlib
 
 
-# Create a Record Data Class that consists of the `sender`, `receiver`, and
+# Record Data Class that consists of the `sender`, `receiver`, and
 # `amount` attributes
 @dataclass
 class Record:
@@ -16,7 +16,7 @@ class Record:
     receiver: str
     amount: float
 
-# Modify the Existing Block Data Class to Store Record Data
+# Block Data Class to Store Record Data
 @dataclass
 class Block:
     # Rename the `data` attribute to `record`, and set the data type to `Record`
@@ -96,16 +96,13 @@ st.markdown("## Store a Transaction Record in the PyChain")
 
 pychain = setup()
 
-# Delete the `input_data` variable from the Streamlit interface.
-# input_data = st.text_input("Block Data")
-
-# Add an input area where you can get a value for `sender` from the user.
+# Input area where you can get a value for `sender` from the user.
 input_sender = st.text_input("sender")
 
-# Add an input area where you can get a value for `receiver` from the user.
+# Input area where you can get a value for `receiver` from the user.
 input_receiver = st.text_input("receiver")
 
-# Add an input area where you can get a value for `amount` from the user.
+# Input area where you can get a value for `amount` from the user.
 input_amount = st.text_input("amount")
 
 if st.button("Add Block"):
