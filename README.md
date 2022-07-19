@@ -43,12 +43,12 @@ Once opened in your browser you will see the app as displayed.
 
 
 ### *INPUT*
-The app allows to set a **block difficulty**, add a **sender**, a **receiver** and a trasaction **amount**.
+The app allows to set a **block difficulty**, add a **sender**, a **receiver** and a transaction **amount**.
 
 * Block Difficulty: Slider for the user to select the desired `difficulty` level.
 * Sender: Input area to get a value for the `sender` from the user.
 * Receiver: Input area to get a value for the `receiver` from the user.
-* Amount: Input area to get a value for `amount` from the user.
+* Amount: Input area to get a value for the `amount` from the user.
 
 ### *ADDING BLOCK*
 Once the block difficulty is set and all the information is completed you can select the `Add Block` button and it will automaticaly add it the the PyChain ledger as a new block in the block chain with its unique hash.
@@ -71,7 +71,7 @@ If after pressing the button it returns "True" your blockchain is accurate (as d
 ## COMING SOON
 Genesys is still considered in alpha phase.
 
-The next step will consist in 
+The next step will consist in:
 
 * Storing our PyChain blockchain in a decentralized storage solution (ie. Storj or other similar technology).
 * Enhance the security of the blockchain.

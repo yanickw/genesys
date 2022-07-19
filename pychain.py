@@ -92,7 +92,7 @@ def setup():
 
 # Main Title of the app
 st.markdown("# Genesys")
-st.markdown("## Store a Transaction Record in the PyChain")
+st.markdown("## Stores Transaction Records in the PyChain")
 
 pychain = setup()
 
