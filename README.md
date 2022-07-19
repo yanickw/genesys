@@ -1,5 +1,5 @@
 # GENESYS
-GENESYS is a blockchain-based ledger system with a user-friendly web interface that allows peer to peer financial transactions (that is, to transfer money between senders and receivers) and to verify the integrity of the data in the ledger.
+GENESYS is a blockchain-based ledger system with a user-friendly web interface that allows peer to peer financial transactions (transfer money between senders and receivers) and to verify the integrity of the data in the ledger.
 
 ---
 
@@ -16,7 +16,7 @@ Will need to be installed:
 
 streamlit 1.11.0
 ```
-pip install streamlit
+$ pip install streamlit
 ```
 ---
 
@@ -28,26 +28,27 @@ $ git clone https://github.com/yanickw/genesys
 ```
 
 ---
-## Get Started
+## Getting Started
 
-Running the app
+Think of Genesys has a gateway to store transaction information within a decentralized blockchain. To get started you run the app by typing:
+
 ```
 $ streamlit run pychain.py
 ```
 
-Once it opens in your browser you will see the app.
+Once opened in your browser you will see the app as displayed.
 
 ![Streamlit_UI](./images/Genesys_Streamlit_UI.png)
 
-Genesys is a gateway to store transaction information within a decentralized blockchain.
+
 
 ### *INPUT*
-The app allows to set a the **block difficulty**, add a **sender**, a **receiver** and a trasaction **amount**.
+The app allows to set a **block difficulty**, add a **sender**, a **receiver** and a trasaction **amount**.
 
-* Block Difficulty: 
-* Sender:
-* Receiver:
-* Amount:
+* Block Difficulty: Slider for the user to select the desired `difficulty` level.
+* Sender: Input area to get a value for the `sender` from the user.
+* Receiver: Input area to get a value for the `receiver` from the user.
+* Amount: Input area to get a value for `amount` from the user.
 
 ### *ADDING BLOCK*
 Once the block difficulty is set and all the information is completed you can select the `Add Block` button and it will automaticaly add it the the PyChain ledger as a new block in the block chain with its unique hash.
@@ -55,17 +56,19 @@ Once the block difficulty is set and all the information is completed you can se
 ### *BLOCK INSPECTOR*
 The **Block Inspector** allows you to get the information about a specific block within the PyChain Ledger.
 
-Just Select the block that you would like to get the information from the drop down menu located on the left side bar of the app and the requested information will update under the same menu.
+Select the block that you would like to get the information from the drop down menu located on the left side bar of the app and the requested information will update under the same menu.
 
 ### *VALIDATE CHAIN*
 
-You can validate that the blockchain hasn't been compromised at any time using the `Validate Chain` button located at the bottom of the app. If after pressing the button it returns "True" your blockchain is accurate (as demonstrated in the following picture)
+You can validate that the blockchain hasn't been compromised at any time using the `Validate Chain` button located at the bottom of the app. 
+
+If after pressing the button it returns "True" your blockchain is accurate (as demonstrated in the following picture)
 
 ![Valid_Chain](./images/Genesys_Valid_Chain.png)
 
 ---
 
-## NEXT STEP
+## COMING SOON
 Genesys is still considered in alpha phase.
 
 The next step will consist in 

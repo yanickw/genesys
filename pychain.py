@@ -46,7 +46,7 @@ class Block:
 
         return sha.hexdigest()
 
-
+# PyChain data classes.
 @dataclass
 class PyChain:
     chain: List[Block]
@@ -90,8 +90,8 @@ def setup():
     print("Initializing Chain")
     return PyChain([Block("Genesis", 0)])
 
-
-st.markdown("# PyChain")
+# Main Title of the app
+st.markdown("# Genesys")
 st.markdown("## Store a Transaction Record in the PyChain")
 
 pychain = setup()
@@ -105,6 +105,7 @@ input_receiver = st.text_input("receiver")
 # Input area where you can get a value for `amount` from the user.
 input_amount = st.text_input("amount")
 
+# Access the last block in the chain
 if st.button("Add Block"):
     prev_block = pychain.chain[-1]
     prev_block_hash = prev_block.hash_block()
@@ -121,22 +122,25 @@ if st.button("Add Block"):
     pychain.add_block(new_block)
     st.balloons()
 
-# Streamlit Code (continues)
 
 st.markdown("## The PyChain Ledger")
 
 pychain_df = pd.DataFrame(pychain.chain).astype(str)
 st.write(pychain_df)
 
+# Sets a difficulty slider in the app sidebar.
 difficulty = st.sidebar.slider("Block Difficulty", 1, 5, 2)
 pychain.difficulty = difficulty
 
+# Sets a drop down menu to select a specific block.
 st.sidebar.write("# Block Inspector")
 selected_block = st.sidebar.selectbox(
     "Which block would you like to see?", pychain.chain
 )
 
+# Returns the information about the selected block. 
 st.sidebar.write(selected_block)
 
+# Button to trigger the “Validate Blockchain”.
 if st.button("Validate Chain"):
-    st.write(pychain.is_valid())
+    st.write(pychain.is_valid()) # Return True if valid.
